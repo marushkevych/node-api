@@ -107,6 +107,8 @@ var SampleApp = function() {
         
         self.routes['/comments'] = function(req, res) {
             res.setHeader('Content-Type', 'application/json');
+            res.setHeader('Access-Control-Allow-Credentials', 'true');
+            res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4000');
             res.send("{'name':'bar', 'needRide':false}");
         };
     };
