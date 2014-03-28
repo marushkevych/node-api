@@ -130,7 +130,7 @@ var SampleApp = function() {
             self.app.get(r, self.routes[r]);
         }
         
-        app.use(express.static(__dirname + '/public'));
+        self.app.use(express.static(__dirname + '/public'));
     };
 
 
