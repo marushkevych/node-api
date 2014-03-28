@@ -100,9 +100,14 @@ var SampleApp = function() {
             res.send("<html><body><img src='" + link + "'></body></html>");
         };
 
+//        self.routes['/'] = function(req, res) {
+//            res.setHeader('Content-Type', 'text/html');
+//            res.send(self.cache_get('index.html') );
+//        };
+        
         self.routes['/'] = function(req, res) {
             res.setHeader('Content-Type', 'text/html');
-            res.send(self.cache_get('index.html') );
+            res.send(self.cache_get('card-selector/index.html') );
         };
         
         self.routes['/comments'] = function(req, res) {
