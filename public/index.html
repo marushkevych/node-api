@@ -43,7 +43,7 @@
             <!-- exact matches-->
             <div>
                 <h2>Exact Matches</h2>
-                <ul ng-repeat="card in cards">
+                <ul ng-repeat="card in cards | filter:criteria:exactComparator">
                     <li>{{card.name}}</li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
             <!-- closest matches-->
             <div>
                 <h2>Closest Matches</h2>
-                <ul ng-repeat="card in cards">
+                <ul ng-repeat="card in cards  | filter:criteria:closestMatchComparator">
                     <li>{{card.name}}</li>
                 </ul>
             </div>

@@ -1,5 +1,15 @@
 function SelectorController($scope){
     
+    $scope.exactComparator = function(card, criteria){
+        console.log('card', card)
+        console.log('criteria', criteria)
+        return card.cardValue === criteria.cardValue;
+    }
+    
+    $scope.closestMatchComparator = function(card, criteria){
+        return false;
+    }
+    
     /**
      * cardValue: standard, variable, standardAndVariable
      * 
